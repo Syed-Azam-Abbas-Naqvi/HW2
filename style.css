@@ -13,7 +13,7 @@ body {
     width: 320px;
     height: 320px;
     border-radius: 50%;
-    border: 10px solid #555;
+    border: 10px solid #474646;
     overflow: hidden;
     margin-top: 40px;
     box-shadow: 0 0 25px #00f2ff;
@@ -76,7 +76,7 @@ body {
 }
 
 .app:hover {
-    background: #00eaff90;
+    background: #898c8d90;
 }
 
 
@@ -88,7 +88,7 @@ body {
 
 #pulse {
     font-size: 30px;
-    color: #ff366b;
+    color: #f52b61;
     animation: pulseAnim 1.4s infinite;
 }
 
