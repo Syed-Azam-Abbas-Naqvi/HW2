@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smartwatch UI</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="watch-frame">
+    <div class="status-bar">
+     <span>📶</span>
+     
+    </div>
+
+    <button class="theme-btn" onclick="toggleTheme()">🌓</button>
+
+
+
+    <div id="screen" class="screen">
+
+        
+        <div id="home" class="page active">
+            <div class="time" id="time"></div>
+            <div class="date" id="date"></div>
+            <div class="battery">
+                🔋 <span id="batteryHome">76%</span>
+            </div>
+        </div>
+
+        
+        <div id="menu" class="page">
+            <h3>Apps</h3>
+            <div class="app-grid">
+             <div class="app" onclick="openApp('fitness')">🏃</div>
+             <div class="app" onclick="openApp('heart')">❤️</div>
+             <div class="app" onclick="openApp('music')">🎵</div>
+             <div class="app" onclick="openApp('photos')">📷</div>
+             <div class="app" onclick="openApp('notify')">🔔</div>
+             <div class="app" onclick="openApp('home')">⌚</div>
+            </div>
+
+        </div>
+
+      
+        <div id="fitness" class="page">
+            <h3>Fitness</h3>
+            <p>Steps: <span id="steps">2500</span></p>
+            <button onclick="countSteps()">+100 Steps</button>
+            <div class="fitness-ring"></div>
+            
+        </div>
+
+        
+        <div id="heart" class="page">
+            <h3>Heart Rate</h3>
+            <p id="pulse" class="pulse">72 bpm</p>
+            <button onclick="randomPulse()">Measure ❤️</button>
+        </div>
+
+       
+       
+        <div id="music" class="page">
+          <h3>Music Player 🎧</h3>
+
+                    <p id="trackName">Loading...</p>
+
+                    <audio id="player" controls>
+                        Your browser does not support the audio tag.
+                    </audio>
+       
+
+          <div class="music-controls">
+            <button onclick="prevSong()">⏮️ Prev</button>
+            <button onclick="togglePlay()">⏯️ Play</button>
+            <button onclick="nextSong()">⏭️ Next</button>
+          </div>
+        </div>
+
+                
+                <div id="photos" class="page">
+                    <h3>Photos</h3>
+                    <p id="photoName"> </p>
+                        <div class="photo-container">
+                        <img id="photoView" src="" alt="photo" onclick="nextPhoto()" />
+                    </div>
+                    <div class="photo-controls">
+                        <button onclick="prevPhoto()">⏮️ Prev</button>
+                        <button onclick="nextPhoto()">⏭️ Next</button>
+                    </div>
+                </div>
+
+
+        
+        <div id="notify" class="page">
+            <h3>Notifications</h3>
+            <ul id="noti-list">
+                <li>Message from Mom ❤️</li>
+                <li>Class reminder at 10:00</li>
+                <li>Project deadline coming 😅</li>
+            </ul>
+            <button onclick="clearNotify()">Clear All</button>
+        </div>
+
+    </div>
+</div>
+
+
+<div class="nav">
+    <button onclick="openApp('home')">⌚ Home</button>
+    <button onclick="openApp('menu')">📱 Apps</button>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
